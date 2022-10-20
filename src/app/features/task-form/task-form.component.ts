@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
-import { NewTaskInputComponent } from 'src/app/new-task-input/new-task-input.component';
+import { NewTaskInputComponent } from 'src/app/features/new-task-input/new-task-input.component';
 
 @Component({
   selector: 'app-task-form',
