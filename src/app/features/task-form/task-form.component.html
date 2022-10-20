@@ -1,0 +1,9 @@
+
+<form>
+    <!--<new-task-input ></new-task-input>-->
+    <input id="new-task-input" #newTask type="text">
+    <!-- BUTTON -->
+    <!-- <add-new-task (click)="addTask(newTask.value,$event)"></add-new-task> -->    
+    <!-- <app-button (click)="addTask(newTask.value,$event)"></app-button> -->
+    <app-button id="add-button" (click)="addTask(newTask.value, $event)">ADD</app-button>
+  </form>

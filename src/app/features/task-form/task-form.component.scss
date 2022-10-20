@@ -1,0 +1,26 @@
+
+#new-task-input {
+    display: inline-block;
+    align-self: center;
+    width: 376px;
+    height: 64px;
+    font-size: 24px;
+    border: 2px solid black;
+    margin-right: 8px;
+}
+
+#add-button {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    
+    width: 128px;
+    height: 64px;
+}
+
+button {
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    background-color: transparent;
+}

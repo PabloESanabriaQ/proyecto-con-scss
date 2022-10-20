@@ -1,0 +1,14 @@
+<li [attr.data]="task.id">
+    <!-- TASK ITEM -->
+    <div class="task-container">
+      <button class="check-task" (click)="checkTask(this.task)" [ngClass]="task.completed ? 'checked' : ''"></button>
+      
+    <a routerLink="/tasks/{{task.id}}">
+      <div class="task-description" [ngClass]="task.completed ? 'linethrough' : ''">{{task.description}}</div>
+      
+  </a><!-- BUTTON -->
+      <div class="trashcan-container">
+        <app-button class="trashcan" (click)="deleteTask(task.id)"></app-button>
+      </div>
+    </div>
+  </li>

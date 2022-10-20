@@ -1,11 +1,17 @@
-<h1>Lista de tareas de Pablo</h1>
-<form>
-  <input id="new-task-input" #newTask type="text">
-  <button id="add-new-task" (click)="addTask(newTask.value,$event)">ADD</button>
-</form>
-<div class="task-container" *ngFor="let task of tasks" [attr.data]="task.id">
-  <button class="check-task" (click)="check(task)" [ngClass]="task.completed ? 'checked' : ''"></button>
-  
-  <div class="task-description" [ngClass]="task.completed ? 'linethrough' : ''">{{task?.description}}</div>
-  <button class="delete-task" (click)="removeTask(task.id)"></button>
-</div>
+<!-- HEADER -->
+<app-header></app-header>
+<!-- MAIN -->
+<!-- FORM -->
+<!-- 
+  LLEVAR AL MAIN EL APP TASK FORM Y EL APP TASK ITEM
+
+  TASK LIST
+<app-main>
+  <app-task-form></app-task-form>
+  <ul>
+ <app-task-item *ngFor="let task of tasks" [task]="task" (deleteTaskEvent)="removeTask($event)"></app-task-item>
+</ul>
+</app-main>
+
+  -->
+  <router-outlet></router-outlet>

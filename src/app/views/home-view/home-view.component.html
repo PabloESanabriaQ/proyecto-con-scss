@@ -1,0 +1,8 @@
+<p>home-view works!</p>
+
+<app-main>
+    <app-task-form></app-task-form>
+    <ul>
+   <app-task-item *ngFor="let task of tasks" [task]="task" (deleteTaskEvent)="removeTask($event)"></app-task-item>
+  </ul>
+</app-main>
