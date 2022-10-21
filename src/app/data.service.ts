@@ -11,7 +11,9 @@ export class DataService {
     //this.task
     new TaskModel(0, 'hacer ensalada', true),
     new TaskModel(1, 'aprender react', false),
-    new TaskModel(2, 'aprender angular', false)
+    new TaskModel(2, 'Aprender Angular', false),
+    new TaskModel(3, 'Aprender Typescript', false),
+    new TaskModel(4, 'Aprender React', false)
   ];
 
   private tasks$ = new Subject<Task[]>();
@@ -35,6 +37,7 @@ export class DataService {
 
   removeTask(taskId: number){
     this.tasks = this.tasks.filter(t => t.id !== taskId);
+    this.tasks$.next(this.tasks);
   }
 
   check(task: TaskModel){
